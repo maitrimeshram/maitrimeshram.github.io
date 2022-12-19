@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	body{
+		font-family: calibri,Helventica,sans-serif;
+		background-color:palevioletred;
+	}
+
+	input[type=text],input[type=password],textarea {
+		width:100%;
+		padding:15px;
+		margin:5px 0 22px 0;
+		display:inline-block;
+		border-collapse:;
+		background-image: !important;
+	}
+	input[type=text]:focus,input[type=password]:focus{
+		background-color:blueviolet;
+		background-color:purple;
+		outline:none;
+	}
+	 div{
+
+	 	 padding:10px 0;
+	 }
+	 hr{
+	 	border:1px solid #4CAF50;
+	 	color:whitesmoke;
+	 	padding:16px 20px;
+	 	margin:8px 0;
+	 	border: none;
+	 	cursore:pointer;
+	 	width:100%;
+	 	opacity:0.9;
+	 }
+	  .registerbt:hover {
+	  	opacity: 1;
+	  }
+</style>
+</head>
+<body>
+<form>
+	<div class="container">
+	<center> <h1>Student Registration Form</h1></center>
+	<hr>
+
+	<label> Firstname</label>
+   <input type="text" name="Firstname"placeholder="Firstname"size="15"required/>
+   <label>Middlename:</label>
+   <input type="text"name="Middlename"placeholder="Middlename"size="15"required/>
+   <label>Lastname</label>
+   <input type="text"name="lastname"placeholder="Lastname"size="15"required/>
+   <div>
+   <label>
+   	
+   	course :
+
+   </label>
+
+
+  <select>
+  <option value="Course">Course</option>
+  <option value="BCA">BCA</option>
+  <option value="BBA">BBA</option>
+  <option value="B.Tech">B.Tech</option>
+  <option value="MBA">MBA</option>
+  <option value="M.Tech">M.Tech</option>	
+  </select>
+</div>
+<div>
+<label>
+
+Gender :
+
+</label><br>
+
+<input type="radio"value="Male"name="gender"checked>Male
+
+<input type="radio"value="Female"name="gender">Female
+
+<input type="radio"value="opter"name="gender">other
+
+</div>
+<label>
+
+phone:
+
+</label>
+
+<input type="text"name="country code"placeholder="Country Code"value="+91"size="2"/>
+<input type="text"name="phone"placeholder="phone no."size="10"/ required>
+
+Current Address:
+
+<textarea cols="80"rows="5"placeholder="Current Address"value="Address"required>
+	
+</textarea>
+
+<input type="text"placeholder="Enter Email"name="email"required>
+
+<label for="psw"><b>Password</b></label>
+<input type="password"placeholder="Enter Password"name="psw"required>
+
+<label for="password"placeholder="Retype Password" name="psw-repeat"required>
+	<button type="submit"class="registerbtn">Register</button>
+  </form>
+  </div>
+<div align="center">
+<footer>
+	<h2>&copy; Nirankush Meshram | Department of Mechanical Engineer| USN: ME21D037 | S.B. Jain,Nagpur</h2>
+</footer>	
+  </body>	
+  </html>
