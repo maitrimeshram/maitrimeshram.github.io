@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY REGISTRATION</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">LIBRARY REGISTRATION </h1>
+    <form aciton="/myaction.php" name="RegForm" onsubmit="return validateform()" method="post">
+        <div class="page">
+            <div class="field field_v1">
+                <label for="first-name" class="ha-screen-reader">Name</label>
+                <input id="name" type="text" name="Name" class="field__input" placeholder="e.g. Stanislav" />
+                <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label">Name</span>
+                </span>
+            </div>
+
+            <div class="field field_v3">
+                <label for="email" class="ha-screen-reader">E-mail</label>
+                <input id="email" class="field__input" placeholder="e.g. melnik909@ya.ru" name="EMail">
+
+                <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label">E-mail</span>
+                </span>
+            </div>
+
+            <div class="field field_v3">
+                <label for="tel" class="ha-screen-reader">Mobile Number</label>
+                <input id="phone" class="field__input" placeholder="+91 Your Number" name="Telephone">
+                <span class="field__label-wrap" aria-hidden="true">
+
+                    <span class="field__label">Phone Nober</span>
+                </span>
+            </div>
+
+            <div class="field field_v3">
+                <label for="Address" class="ha-screen-reader">Address</label>
+
+                <input id="Address" class="field__input" placeholder="Your Address" type="text" size="65"
+                    name="Address">
+
+                <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label">Address Here</span>
+                </span>
+            </div>
+
+            <div class="field field_v3">
+                <label for="text" class="ha-screen-reader">Massage : </label>
+                <input id="msg" class="field__input" placeholder="Any Msg For Us">
+                <span class="field__label-wrap" aria-hidden="true">
+                    <span class="field__label">Massage About You</span>
+                </span>
+            </div>
+
+            <br>
+            <div class="field field_v3">
+                <input type="submit" value="Submit" name="Submit" class="field__input" />
+                <br>
+                <span class="field__label-wrap" aria-hidden="true">
+                </span>
+            </div>
+
+            <div class="field field_v3">
+                <input type="reset" value="Reset" name="Reset" class="field__input" />
+                <span class="field__label-wrap" aria-hidden="true">
+                </span>
+            </div>
+
+    </form>
+
+    <script>
+        function validateform() {
+            var returnval = true;
+
+            var name = document.forms['RegForm']["name"].value;
+            if (name.length == 0) {
+                alert("Name *Can't be Empty");
+                returnval = false;
+            }
+
+            else if (name.length < 3) {
+                alert("Name *Length of name is too short");
+                returnval = false;
+            }
+
+            var email = document.forms['RegForm']["email"].value;
+            if (email.length > 25) {
+                alert("Email *Email length is too long");
+                returnval = false;
+            }
+
+            var phone = document.forms['RegForm']["phone"].value;
+            if (phone.length != 10) {
+                alert("Phone *Phone number should be of 10 digits!");
+                returnval = false;
+            }
+
+
+            var Address = document.forms['RegForm']["Address"].value;
+            if (Address.length < 10) {
+                alert("Address *Enter Address Properly");
+                returnval = false;
+            }
+
+
+            return returnval;
+        }
+
+
+
+    </script>
+
+</body>
+
+
+</html>
